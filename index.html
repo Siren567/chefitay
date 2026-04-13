@@ -319,6 +319,47 @@
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+
+    /* ─────────────────────────────────────────
+       GALLERY
+    ───────────────────────────────────────── */
+    #gallery {
+      padding: 105px 0 95px;
+      background: var(--bg);
+    }
+    .gallery-head {
+      text-align: center;
+      margin-bottom: 2.6rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .gallery-item {
+      height: 290px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      background: #ddd;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s var(--ease);
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    @media(max-width:980px) {
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media(max-width:600px) {
+      #gallery { padding: 85px 0 75px; }
+      .gallery-grid { grid-template-columns: 1fr; gap: .8rem; }
+      .gallery-item { height: 240px; }
+    }
+
     /* ─────────────────────────────────────────
        2. EXPERIENCE
     ───────────────────────────────────────── */
@@ -814,6 +855,26 @@
     </div>
     <div class="hero-image">
       <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1400&q=85&auto=format&fit=crop" alt="שף בפעולה" />
+    </div>
+  </div>
+</section>
+
+<!-- ─── GALLERY ─────────────────────────────── -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="gallery-head fade">
+      <span class="section-kicker">GALLERY</span>
+      <span class="gold-line"></span>
+      <h2 class="section-h2">גלריה</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item fade"><img src="WhatsApp Image 2026-04-13 at 17.34.29.jpeg" alt="גלריית מנות שף" loading="lazy" /></div>
+      <div class="gallery-item fade d1"><img src="WhatsApp Image 2026-04-13 at 17.34.29 (1).jpeg" alt="גלריית מנות שף" loading="lazy" /></div>
+      <div class="gallery-item fade d2"><img src="WhatsApp Image 2026-04-13 at 17.21.10 (2).jpeg" alt="גלריית מנות שף" loading="lazy" /></div>
+      <div class="gallery-item fade"><img src="WhatsApp Image 2026-04-13 at 17.21.10.jpeg" alt="גלריית מנות שף" loading="lazy" /></div>
+      <div class="gallery-item fade d1"><img src="WhatsApp Image 2026-04-13 at 17.21.10 (1).jpeg" alt="גלריית מנות שף" loading="lazy" /></div>
+      <div class="gallery-item fade d2"><img src="WhatsApp Image 2026-04-13 at 17.21.09.jpeg" alt="גלריית מנות שף" loading="lazy" /></div>
     </div>
   </div>
 </section>
