@@ -268,6 +268,56 @@
       letter-spacing: .01em;
     }
 
+    .hero-btns {
+      display: flex;
+      gap: .8rem;
+      opacity: 0;
+      animation: fadeUp 1s .74s var(--ease) forwards;
+    }
+
+    .hero-btn-primary {
+      display: inline-block;
+      font-family: var(--ff-b);
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      padding: .95rem 2rem;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      transition: background .35s var(--ease), transform .35s var(--ease);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .hero-btn-primary:hover {
+      background: #2a2a2a;
+      transform: translateY(-2px);
+    }
+
+    .hero-btn-ghost {
+      display: inline-block;
+      font-family: var(--ff-b);
+      font-size: .82rem;
+      font-weight: 400;
+      letter-spacing: .14em;
+      padding: .95rem 2rem;
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid rgba(28,28,28,.28);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all .35s var(--ease);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .hero-btn-ghost:hover {
+      border-color: rgba(28,28,28,.65);
+      color: var(--ink);
+      transform: translateY(-2px);
+    }
+
     .hero-image {
       height: min(78vh, 760px);
       border-radius: 16px;
@@ -312,6 +362,11 @@
         order: -1;
         height: 48vh;
       }
+    }
+
+    @media(max-width:600px) {
+      .hero-btns { flex-direction: column; align-items: stretch; }
+      .hero-btn-primary, .hero-btn-ghost { text-align: center; }
     }
 
     @keyframes fadeUp {
@@ -810,6 +865,10 @@
       <span class="hero-tag">PRIVATE CHEF EXPERIENCE</span>
       <h1 class="hero-h1">שף פרטי לאירועים<br>בלתי נשכחים</h1>
       <p class="hero-sub">חוויה קולינרית בהתאמה אישית, עם דיוק בכל פרט ותפריט שמותאם לאנשים שיושבים סביב השולחן.</p>
+      <div class="hero-btns">
+        <a href="#cta" class="hero-btn-primary">לקבלת הצעת מחיר</a>
+        <a href="https://wa.me/972552406040" class="hero-btn-ghost">שלחו הודעה</a>
+      </div>
     </div>
     <div class="hero-image">
       <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1400&q=85&auto=format&fit=crop" alt="שף בפעולה" />
