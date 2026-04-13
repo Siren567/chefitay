@@ -125,9 +125,9 @@
 
     .buttons-group {
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: flex-start;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
     }
 
     .nav-btn {
@@ -190,8 +190,20 @@
       .nav-links { display: none; }
       nav { padding: 1.5rem 1.6rem; }
       nav.solid { padding: 1rem 1.6rem; }
-      .buttons-group { flex-direction: column; align-items: flex-start; gap: 12px; }
-      .nav-btn { text-align: center; width: auto; }
+      .buttons-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        width: 154px;
+        margin-inline-start: .35rem;
+      }
+      .nav-btn {
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+      }
+      .nav-btn-primary { padding: 11px 16px; }
+      .nav-btn-ig { padding: 10px 16px; }
     }
 
     /* ─────────────────────────────────────────
